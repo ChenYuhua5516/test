@@ -1,0 +1,18 @@
+server:
+  port: 8001
+
+# Mybatis配置  扫描pojo包  配置文件mabatis-config.xml  mapper文件
+mybatis:
+  type-aliases-package: com.daji.pojo
+  mapper-locations: classpath:mapper/*.xml
+
+#Spring配置
+spring:
+  application:
+    name: springcloud-provider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tab_emp?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
